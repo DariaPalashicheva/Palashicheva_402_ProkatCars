@@ -29,12 +29,12 @@ namespace Palashicheva_402_ProkatCars.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            AppFrame.MainFrame.Navigate(new RentAddEdit((sender as Button).DataContext as Rent));
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            AppFrame.MainFrame.Navigate(new RentAddEdit(null));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)

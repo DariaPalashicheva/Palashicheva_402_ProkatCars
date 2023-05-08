@@ -9,6 +9,30 @@
       Title="RentAddEdit">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Клиент" Style="{StaticResource TB}"/>
+        <ComboBox SelectedItem="{Binding Client}" Grid.Column="1" x:Name="ComboClient" DisplayMemberPath="Familiya"/>
+        <TextBlock  Text="Автомобиль" Grid.Row="1" Grid.Column="1" Style="{StaticResource TB}"/>
+        <ComboBox SelectedItem="{Binding Car}" Grid.Row="1" Grid.Column="1" x:Name="ComboCar" DisplayMemberPath="Model"/>
+        <TextBlock Text="Дата начала"/>
+        <DatePicker SelectedDate="{Binding StartDate}" Grid.Row="2" Grid.Column="1" FirstDayOfWeek="Monday"/>
+        <TextBlock Text="Дата конца проката"/>
+        <DatePicker SelectedDate="{Binding EndDate}" Grid.Row="3" Grid.Column="1" FirstDayOfWeek="Monday"/>
+
+        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>
     </Grid>
 </Page>
