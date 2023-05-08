@@ -1,0 +1,23 @@
+﻿<Page x:Class="Palashicheva_402_ProkatCars.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Palashicheva_402_ProkatCars.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="850" d:DesignWidth="1400"
+      Title="LoginPage">
+    
+    <Grid>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Введите логин" Style="{StaticResource Label}"/>
+            <TextBox Style="{StaticResource TextBox}" x:Name="TxbLogin"/>
+            <Label Content="Введите пароль" Style="{StaticResource Label}"/>
+            <PasswordBox Style="{StaticResource PasswordBox}" x:Name="PsbPassword"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Регистрация" Style="{StaticResource ButtonY}"/>
+                <Button Content="Войти" Name="BtnIn" Style="{StaticResource ButtonG}" Click="BtnIn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

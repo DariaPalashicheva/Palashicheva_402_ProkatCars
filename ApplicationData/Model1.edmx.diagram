@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="438ec9651b1d4c2297069bc8eb6ecccd" Name="Diagram1">
+        <EntityTypeShape EntityType="ProkatsModel.Brand" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Car" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Client" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Color" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Rent" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.User" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="ProkatsModel.FK_Car_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="ProkatsModel.FK_Car_Color" ManuallyRouted="false" />
+        <AssociationConnector Association="ProkatsModel.FK_Rent_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="ProkatsModel.FK_Rent_Client" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
