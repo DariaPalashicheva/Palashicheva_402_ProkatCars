@@ -41,7 +41,7 @@ namespace Palashicheva_402_ProkatCars.Pages
                     switch (userObj.IdRole)
                     {
                         case 1:
-                            MessageBox.Show("Здравствуйте," + userObj.Name + "!",
+                            MessageBox.Show("Успешный вход",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                             AppFrame.MainFrame.Navigate(new MainPage());
                             break;

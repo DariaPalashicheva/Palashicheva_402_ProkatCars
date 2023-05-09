@@ -111,6 +111,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\BrandAddEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BrandPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CarAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +153,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\BrandAddEdit.xaml.cs">
+      <DependentUpon>BrandAddEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BrandPage.xaml.cs">
+      <DependentUpon>BrandPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CarAddEdit.xaml.cs">
       <DependentUpon>CarAddEdit.xaml</DependentUpon>
     </Compile>
@@ -214,6 +228,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\picture1.png" />
+    <Resource Include="Resources\picc.jpg" />
+    <Resource Include="Resources\ppic.png" />
+    <Resource Include="Resources\pict.jpg" />
+    <Resource Include="Resources\pic.jpg" />
+    <Resource Include="Resources\pic1.jpg" />
+    <Resource Include="Resources\Picture.jpg" />
     <Resource Include="Resources\main.png" />
   </ItemGroup>
   <ItemGroup>

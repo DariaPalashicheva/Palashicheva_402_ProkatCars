@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Palashicheva_402_ProkatCars"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen">
-    <Grid Background="LightGray">
+        Title="Прокат автомобилей" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFC5C5C5">
         <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="700"/>
@@ -17,13 +17,14 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
         <Grid Background="#FF55576F" Grid.ColumnSpan="2"/>
-        <DockPanel Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+        <Image Source="Resources/Picture1.png" Stretch="UniformToFill" Grid.ColumnSpan="2" Opacity="0.6"/>
+        <DockPanel Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Opacity="0.9">
             <Button x:Name="BtnCar" Content="Автомобили" Style="{StaticResource MainBt}" Click="BtnCar_Click"/>
             <Button x:Name="BtnClient" Content="Клиенты" Style="{StaticResource MainBt}" Click="BtnClient_Click"/>
             <Button x:Name="BtnRent" Content="Заявки" Style="{StaticResource MainBt}" Click="BtnRent_Click"/>
-            <Button x:Name="BtnBrand" Content="Марки" Style="{StaticResource MainBt}"/>
+            <Button x:Name="BtnBrand" Content="Марки" Style="{StaticResource MainBt}" Click="BtnBrand_Click"/>
         </DockPanel>
-        <Grid Background="#FF3F4575" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Grid Background="#FF373842" Grid.Row="2" Grid.ColumnSpan="2"/>
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame" Grid.ColumnSpan="2"/>
         <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Назад" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>
     </Grid>
