@@ -20,7 +20,7 @@
         <DockPanel Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <Button x:Name="BtnCar" Content="Автомобили" Style="{StaticResource MainBt}" Click="BtnCar_Click"/>
             <Button x:Name="BtnClient" Content="Клиенты" Style="{StaticResource MainBt}" Click="BtnClient_Click"/>
-            <Button x:Name="BtnRent" Content="Заявки" Style="{StaticResource MainBt}"/>
+            <Button x:Name="BtnRent" Content="Заявки" Style="{StaticResource MainBt}" Click="BtnRent_Click"/>
             <Button x:Name="BtnBrand" Content="Марки" Style="{StaticResource MainBt}"/>
         </DockPanel>
         <Grid Background="#FF3F4575" Grid.Row="2" Grid.ColumnSpan="2"/>

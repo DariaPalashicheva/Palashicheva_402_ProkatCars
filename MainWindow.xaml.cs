@@ -63,5 +63,10 @@ namespace Palashicheva_402_ProkatCars
         {
             MainFrame.Navigate(new ClientPage());
         }
+
+        private void BtnRent_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new RentPage());
+        }
     }
 }
