@@ -41,7 +41,12 @@ namespace Palashicheva_402_ProkatCars.Pages
                     switch (userObj.IdRole)
                     {
                         case 1:
-                            MessageBox.Show("Успешный вход",
+                            MessageBox.Show("Успешный вход как администратор",
+                                "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            AppFrame.MainFrame.Navigate(new MainPageRole1());
+                            break;
+                        case 2:
+                            MessageBox.Show("Успешный вход как пользователь",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                             AppFrame.MainFrame.Navigate(new MainPage());
                             break;

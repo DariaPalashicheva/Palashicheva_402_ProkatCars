@@ -1,4 +1,4 @@
-﻿<Page x:Class="Palashicheva_402_ProkatCars.Pages.MainPage"
+﻿<Page x:Class="Palashicheva_402_ProkatCars.Pages.MainPageRole1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:Palashicheva_402_ProkatCars.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1400"
-      Title="MainPage">
+      Title="MainPageRole1">
 
     <Grid>
+        <Button x:Name="BtnUser" Content="Пользователи" Style="{StaticResource MainBt}" VerticalAlignment="Top" Opacity="0.9" Click="BtnUser_Click"/>
         <Image Source="\Resources/main.png" Width="250" Height="250"/>
     </Grid>
 </Page>
