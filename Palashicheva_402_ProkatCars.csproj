@@ -72,7 +72,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ApplicationData\AppConnect.cs" />
     <Compile Include="ApplicationData\AppFrame.cs" />
     <Compile Include="ApplicationData\Brand.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -251,15 +250,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Icon1.png" />
+    <Resource Include="Resources\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\picture1.png" />
-    <Resource Include="Resources\picc.jpg" />
-    <Resource Include="Resources\ppic.png" />
-    <Resource Include="Resources\pict.jpg" />
-    <Resource Include="Resources\pic.jpg" />
-    <Resource Include="Resources\pic1.jpg" />
-    <Resource Include="Resources\Picture.jpg" />
     <Resource Include="Resources\main.png" />
   </ItemGroup>
   <ItemGroup>
