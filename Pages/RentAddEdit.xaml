@@ -33,6 +33,6 @@
         <TextBlock Text="Дата конца проката" Grid.Row="3" Style="{StaticResource TB}"/>
         <DatePicker SelectedDate="{Binding EndDate}" Grid.Row="3" Grid.Column="1" FirstDayOfWeek="Monday"/>
 
-        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>
+        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="4" Name="BtnSave" Click="BtnSave_Click"/>
     </Grid>
 </Page>

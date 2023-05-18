@@ -26,6 +26,6 @@
         <TextBlock Text="Марка автомобиля"  Style="{StaticResource TB}"/>
         <TextBox Text="{Binding NameBrand}" TextWrapping="Wrap" Grid.Row="0" Grid.Column="1" MaxLength="50"/>
 
-        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>
+        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="1" Name="BtnSave" Click="BtnSave_Click"/>
     </Grid>
 </Page>
