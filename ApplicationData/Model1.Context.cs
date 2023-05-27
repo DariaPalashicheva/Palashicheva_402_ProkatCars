@@ -23,7 +23,7 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
                 _context = new ProkatEntities();
             return _context;
         }
-
+        
 
         public ProkatEntities()
             : base("name=ProkatEntities")

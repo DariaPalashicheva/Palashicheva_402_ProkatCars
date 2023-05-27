@@ -34,11 +34,8 @@ namespace Palashicheva_402_ProkatCars
             if (MainFrame.CanGoBack)
             {
                 BtnBack.Visibility = Visibility.Visible;
-                BtnCar.Visibility = Visibility.Visible;
-                BtnClient.Visibility = Visibility.Visible;
-                BtnRent.Visibility = Visibility.Visible;
-                BtnBrand.Visibility = Visibility.Visible;
             }
+
             else
             {
                 BtnBack.Visibility = Visibility.Hidden;
@@ -46,6 +43,21 @@ namespace Palashicheva_402_ProkatCars
                 BtnClient.Visibility = Visibility.Hidden;
                 BtnRent.Visibility = Visibility.Hidden;
                 BtnBrand.Visibility = Visibility.Hidden;
+                return;
+            }
+            
+
+            if (AppFrame.x == 1)
+            {
+                BtnRent.Visibility = Visibility.Visible;
+                BtnBrand.Visibility = Visibility.Visible;
+            }
+            if (AppFrame.x == 2)
+            {
+                BtnCar.Visibility = Visibility.Visible;
+                BtnClient.Visibility = Visibility.Visible;
+                BtnRent.Visibility = Visibility.Visible;
+                BtnBrand.Visibility = Visibility.Visible;
             }
         }
 
