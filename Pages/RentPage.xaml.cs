@@ -25,18 +25,6 @@ namespace Palashicheva_402_ProkatCars.Pages
         {
             InitializeComponent();
             DGrid.ItemsSource = ProkatEntities.GetContext().Rent.ToList();
-            if (AppFrame.x == 1)
-            {
-                BtnAdd.Visibility = Visibility.Hidden;
-                BtnDelete.Visibility = Visibility.Hidden;
-                ColumnEdit.Visibility = Visibility.Hidden;
-            }
-            if (AppFrame.x == 2)
-            {
-                BtnAdd.Visibility = Visibility.Visible;
-                BtnDelete.Visibility = Visibility.Visible;
-                ColumnEdit.Visibility = Visibility.Visible;
-            }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)

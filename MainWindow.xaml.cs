@@ -43,21 +43,25 @@ namespace Palashicheva_402_ProkatCars
                 BtnClient.Visibility = Visibility.Hidden;
                 BtnRent.Visibility = Visibility.Hidden;
                 BtnBrand.Visibility = Visibility.Hidden;
+                BtnUser.Visibility = Visibility.Collapsed;
                 return;
             }
             
 
-            if (AppFrame.x == 1)
-            {
-                BtnRent.Visibility = Visibility.Visible;
-                BtnBrand.Visibility = Visibility.Visible;
-            }
-            if (AppFrame.x == 2)
+            if (AppFrame.DostupRole == 1)
             {
                 BtnCar.Visibility = Visibility.Visible;
                 BtnClient.Visibility = Visibility.Visible;
                 BtnRent.Visibility = Visibility.Visible;
                 BtnBrand.Visibility = Visibility.Visible;
+                BtnUser.Visibility = Visibility.Visible;
+            }
+            if (AppFrame.DostupRole == 2)
+            {
+                BtnCar.Visibility = Visibility.Visible;
+                BtnClient.Visibility = Visibility.Visible;
+                BtnRent.Visibility = Visibility.Visible;
+                BtnBrand.Visibility = Visibility.Visible;    
             }
         }
 
@@ -84,6 +88,11 @@ namespace Palashicheva_402_ProkatCars
         private void BtnBrand_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new BrandPage());
+        }
+
+        private void BtnUser_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new UserPage());
         }
     }
 }

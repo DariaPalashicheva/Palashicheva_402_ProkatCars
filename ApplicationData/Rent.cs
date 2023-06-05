@@ -22,5 +22,8 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
     
         public virtual Car Car { get; set; }
         public virtual Client Client { get; set; }
+
+
     }
 }
+

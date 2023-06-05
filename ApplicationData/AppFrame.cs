@@ -10,6 +10,6 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
     class AppFrame
     {
         public static Frame MainFrame;
-        public static int x;
+        public static int DostupRole;
     }
 }
