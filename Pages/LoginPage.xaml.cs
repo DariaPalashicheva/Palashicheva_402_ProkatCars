@@ -43,11 +43,13 @@ namespace Palashicheva_402_ProkatCars.Pages
                         case 1:
                             MessageBox.Show("Успешный вход как администратор",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                            AppFrame.MainFrame.Navigate(new MainPageRole1());
+                            AppFrame.DostupRole = 1;
+                            AppFrame.MainFrame.Navigate(new MainPage());
                             break;
                         case 2:
                             MessageBox.Show("Успешный вход как пользователь",
                                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                            AppFrame.DostupRole = 2;
                             AppFrame.MainFrame.Navigate(new MainPage());
                             break;
                     }

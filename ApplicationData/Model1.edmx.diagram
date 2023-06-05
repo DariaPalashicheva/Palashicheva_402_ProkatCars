@@ -6,12 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b8e262e7d7b84ff4b5469b7e720d3e23" Name="Diagram1">
         <EntityTypeShape EntityType="ProkatsModel.Brand" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProkatsModel.Car" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProkatsModel.Client" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProkatsModel.Color" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Car" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Client" Width="1.75" PointX="5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.Color" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ProkatsModel.Rent" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProkatsModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProkatsModel.User" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProkatsModel.User" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="ProkatsModel.FK_Car_Brand" ManuallyRouted="false" />
         <AssociationConnector Association="ProkatsModel.FK_Car_Color" ManuallyRouted="false" />
         <AssociationConnector Association="ProkatsModel.FK_Rent_Car" ManuallyRouted="false" />

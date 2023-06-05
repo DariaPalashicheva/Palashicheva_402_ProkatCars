@@ -24,7 +24,7 @@
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"/>
+                            <Button Content="Редактировать" x:Name="BtnEdit" Click="BtnEdit_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -32,8 +32,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Добавить" Name="BtnAdd" Grid.Row="1" HorizontalAlignment="Center" Click="BtnAdd_Click"/>
-        <Button Content="Удалить" Name="BtnDelete" Grid.Row="1" HorizontalAlignment="Right" Click="BtnDelete_Click"/>
+        <Button Content="Добавить" x:Name="BtnAdd" Grid.Row="1" HorizontalAlignment="Center" Click="BtnAdd_Click"/>
+        <Button Content="Удалить" x:Name="BtnDelete" Grid.Row="1" HorizontalAlignment="Right" Click="BtnDelete_Click"/>
 
     </Grid>
 </Page>
