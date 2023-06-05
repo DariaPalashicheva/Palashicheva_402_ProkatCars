@@ -20,7 +20,7 @@
         <Image Source="Resources/Picture1.png" Stretch="UniformToFill" Grid.ColumnSpan="2" Opacity="0.6"/>
         <Image Source="Resources/Icon1.png" HorizontalAlignment="Left" Margin="10 15 0 15" Opacity="0.9"/>
         <TextBlock Text="Прокат автомобилей" TextWrapping="Wrap" Width="150" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center" Foreground="White" Margin="90 0 0 0" Opacity="0.9"/>
-        <Button x:Name="BtnUser" Grid.ColumnSpan="2" Content="Пользователи" Style="{StaticResource MainBt}" Click="BtnUser_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="BtnUser" Grid.ColumnSpan="2" Content="Пользователи" Style="{StaticResource MainBt}" Click="BtnUser_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.9"/>
         <DockPanel Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Opacity="0.9">
             <Button x:Name="BtnCar" Content="Автомобили" Style="{StaticResource MainBt}" Click="BtnCar_Click"/>
             <Button x:Name="BtnClient" Content="Клиенты" Style="{StaticResource MainBt}" Click="BtnClient_Click"/>
