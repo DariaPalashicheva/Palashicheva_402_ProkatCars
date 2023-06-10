@@ -80,7 +80,9 @@
 
 
 
-
+        <Style TargetType="TextBlock" x:Key="Wrap">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
 
         <Style TargetType="TextBlock" x:Key="Title">
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -93,17 +95,21 @@
             <Setter Property="Height" Value="50"/>
             <Setter Property="Width" Value="100"/>
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="#FF825690"/>
+            <Setter Property="Background" Value="#FFA96CBD"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
+
         <Style TargetType="Button" x:Key="ButtonY">
+            <Setter Property="FontSize" Value="20pt"/>
             <Setter Property="Height" Value="50"/>
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="195"/>
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="#FFFFFFB9"/>
-            <Setter Property="BorderBrush" Value="#FFF5BD25"/>
+            <Setter Property="Background" Value="#FF6578B1"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
+
         <Style TargetType="Label" x:Key="Label">
             <Setter Property="FontSize" Value="18pt"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -121,15 +127,6 @@
             <Setter Property="Width" Value="300"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
-
-        <Style TargetType="Button" x:Key="ButtonB">
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Background" Value="#FF92D0E2"/>
-            <Setter Property="BorderBrush" Value="#FF070EA4"/>
-        </Style>
-
 
     </Application.Resources>
 </Application>

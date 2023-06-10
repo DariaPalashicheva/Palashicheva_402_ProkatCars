@@ -62,5 +62,11 @@ namespace Palashicheva_402_ProkatCars.Pages
 
             }
         }
+
+        private void BtnGuest_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.DostupRole = 0;
+            AppFrame.MainFrame.Navigate(new MainPage());
+        }
     }
 }

@@ -12,31 +12,12 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class Rent
+    public partial class sysdiagrams
     {
-        public int IdRent { get; set; }
-        public int ClientId { get; set; }
-        public int CarId { get; set; }
-        public System.DateTime StartDate { get; set; }
-        public System.DateTime EndDate { get; set; }
-    
-        public virtual Car Car { get; set; }
-        public virtual Client Client { get; set; }
-
-        public int RentalDays
-        {
-            get
-            {
-                return Math.Abs(EndDate.Day - StartDate.Day);
-            }
-        }
-
-        public decimal Result
-        {
-            get
-            {
-                return RentalDays * Car.DayPrice;
-            }
-        }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

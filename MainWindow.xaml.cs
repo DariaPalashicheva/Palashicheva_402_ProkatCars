@@ -39,15 +39,21 @@ namespace Palashicheva_402_ProkatCars
             else
             {
                 BtnBack.Visibility = Visibility.Hidden;
-                BtnCar.Visibility = Visibility.Hidden;
-                BtnClient.Visibility = Visibility.Hidden;
-                BtnRent.Visibility = Visibility.Hidden;
-                BtnBrand.Visibility = Visibility.Hidden;
+                BtnCar.Visibility = Visibility.Collapsed;
+                BtnClient.Visibility = Visibility.Collapsed;
+                BtnRent.Visibility = Visibility.Collapsed;
+                BtnBrand.Visibility = Visibility.Collapsed;
                 BtnUser.Visibility = Visibility.Collapsed;
+                BtnFeedback.Visibility = Visibility.Collapsed;
+                BtnFeedbackAdd.Visibility = Visibility.Collapsed;
                 return;
             }
-            
 
+            if (AppFrame.DostupRole == 0)
+            {
+                BtnCar.Visibility = Visibility.Visible;
+                BtnFeedbackAdd.Visibility = Visibility.Visible;
+            }
             if (AppFrame.DostupRole == 1)
             {
                 BtnCar.Visibility = Visibility.Visible;
@@ -55,13 +61,15 @@ namespace Palashicheva_402_ProkatCars
                 BtnRent.Visibility = Visibility.Visible;
                 BtnBrand.Visibility = Visibility.Visible;
                 BtnUser.Visibility = Visibility.Visible;
+                BtnFeedback.Visibility = Visibility.Visible;
             }
             if (AppFrame.DostupRole == 2)
             {
                 BtnCar.Visibility = Visibility.Visible;
                 BtnClient.Visibility = Visibility.Visible;
                 BtnRent.Visibility = Visibility.Visible;
-                BtnBrand.Visibility = Visibility.Visible;    
+                BtnBrand.Visibility = Visibility.Visible;
+                BtnFeedback.Visibility = Visibility.Visible;
             }
         }
 
@@ -93,6 +101,16 @@ namespace Palashicheva_402_ProkatCars
         private void BtnUser_Click(object sender, RoutedEventArgs e)
         {
             AppFrame.MainFrame.Navigate(new UserPage());
+        }
+
+        private void BtnFeedback_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new FeedbackPage());
+        }
+
+        private void BtnFeedbackAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new FeedbackAddEdit(null));
         }
     }
 }
