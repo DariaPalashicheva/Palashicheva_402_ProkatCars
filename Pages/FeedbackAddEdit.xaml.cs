@@ -17,27 +17,32 @@ using System.Windows.Shapes;
 namespace Palashicheva_402_ProkatCars.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для BrandAddEdit.xaml
+    /// Логика взаимодействия для FeedbackAddEdit.xaml
     /// </summary>
-    public partial class BrandAddEdit : Page
+    public partial class FeedbackAddEdit : Page
     {
-        private Brand _current = new Brand();
+        private Feedback _current = new Feedback();
 
-        public BrandAddEdit(Brand selected)
+        public FeedbackAddEdit(Feedback selected)
         {
             InitializeComponent();
             if (selected != null)
                 _current = selected;
 
             DataContext = _current;
+            ComboStar.ItemsSource = ProkatEntities.GetContext().Star.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_current.NameBrand))
-                errors.AppendLine("Введите марку автомобиля");
+            if (string.IsNullOrWhiteSpace(_current.Sender))
+                errors.AppendLine("Введите ФИО");
+            if (string.IsNullOrWhiteSpace(_current.Text))
+                errors.AppendLine("Введите текст отзыва");
+            if (_current.Star == null)
+                errors.AppendLine("Пожалуйста укажите количество звёзд");
 
             if (errors.Length > 0)
             {
@@ -45,15 +50,14 @@ namespace Palashicheva_402_ProkatCars.Pages
                 return;
             }
 
-            if (_current.IdBrand == 0)
-                ProkatEntities.GetContext().Brand.Add(_current);
+            if (_current.IdFeedback == 0)
+                ProkatEntities.GetContext().Feedback.Add(_current);
 
             try
             {
                 ProkatEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Отзыв успешно добавлен!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());

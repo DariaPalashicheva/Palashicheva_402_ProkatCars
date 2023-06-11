@@ -67,7 +67,7 @@ namespace Palashicheva_402_ProkatCars.Pages
             try
             {
                 ProkatEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена!");
+                MessageBox.Show("Информация сохранена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
             catch (Exception ex)

@@ -21,7 +21,7 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
         {
             if (_context == null)
                 _context = new ProkatEntities();
-                return _context;
+            return _context;
         }
 
         public ProkatEntities()
@@ -38,7 +38,10 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
         public virtual DbSet<Car> Car { get; set; }
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Color> Color { get; set; }
+        public virtual DbSet<Feedback> Feedback { get; set; }
         public virtual DbSet<Rent> Rent { get; set; }
+        public virtual DbSet<Star> Star { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
     }
 }

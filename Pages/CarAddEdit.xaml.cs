@@ -38,16 +38,16 @@ namespace Palashicheva_402_ProkatCars.Pages
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_current.Model))
-                errors.AppendLine("Введите модель авто");
             if (_current.Brand == null)
                 errors.AppendLine("Укажите марку");
+            if (string.IsNullOrWhiteSpace(_current.Model))
+                errors.AppendLine("Введите модель авто");
             if (_current.Year <= 1920 || tbYear.Text.Length < 4 || tbYear.Text.Any(Char.IsLetter))
                 errors.AppendLine("Пожалуйста введите корректный год выпуска (из 4 цифр)");
             if (_current.Color == null)
                 errors.AppendLine("Укажите цвет");
             if (string.IsNullOrWhiteSpace(_current.Number) || _current.Number.Length < 6)
-                errors.AppendLine("Укажите номер автомобиля(Номер должен состоять из 1 буквы, 3 цифр и 2 букв)");
+                errors.AppendLine("Введите номер автомобиля(Номер должен состоять из 1 буквы, 3 цифр и 2 букв)");
             if (_current.DayPrice <= 0 || tbPrice.Text.Any(Char.IsLetter))
                 errors.AppendLine("Цена сутки не может быть отрицательной или равна нулю. Буквы не допустимы.");
 
@@ -63,7 +63,7 @@ namespace Palashicheva_402_ProkatCars.Pages
             try
             {
                 ProkatEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена!");
+                MessageBox.Show("Информация сохранена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

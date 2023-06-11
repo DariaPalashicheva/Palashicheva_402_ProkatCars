@@ -17,27 +17,14 @@ using System.Windows.Shapes;
 namespace Palashicheva_402_ProkatCars.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CarPage.xaml
+    /// Логика взаимодействия для FeedbackPage.xaml
     /// </summary>
-    public partial class CarPage : Page
+    public partial class FeedbackPage : Page
     {
-        public CarPage()
+        public FeedbackPage()
         {
             InitializeComponent();
-            DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
-
-            if (AppFrame.DostupRole == 0)
-            {
-                BtnAdd.Visibility = Visibility.Hidden;
-                BtnDelete.Visibility = Visibility.Hidden;
-                Column.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                BtnAdd.Visibility = Visibility.Visible;
-                BtnDelete.Visibility = Visibility.Visible;
-                Column.Visibility = Visibility.Visible;
-            }
+            DGrid.ItemsSource = ProkatEntities.GetContext().Feedback.ToList();
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -45,33 +32,33 @@ namespace Palashicheva_402_ProkatCars.Pages
             if (Visibility == Visibility.Visible)
             {
                 ProkatEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
+                DGrid.ItemsSource = ProkatEntities.GetContext().Feedback.ToList();
             }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.MainFrame.Navigate(new CarAddEdit((sender as Button).DataContext as Car));
+            AppFrame.MainFrame.Navigate(new FeedbackAddEdit((sender as Button).DataContext as Feedback));
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.MainFrame.Navigate(new CarAddEdit(null));
+            AppFrame.MainFrame.Navigate(new FeedbackAddEdit(null));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var ForRemoving = DGrid.SelectedItems.Cast<Car>().ToList();
+            var ForRemoving = DGrid.SelectedItems.Cast<Feedback>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    ProkatEntities.GetContext().Car.RemoveRange(ForRemoving);
+                    ProkatEntities.GetContext().Feedback.RemoveRange(ForRemoving);
                     ProkatEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
 
-                    DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
+                    DGrid.ItemsSource = ProkatEntities.GetContext().Feedback.ToList();
                 }
                 catch (Exception ex)
                 {
