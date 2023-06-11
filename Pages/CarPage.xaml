@@ -22,7 +22,7 @@
                 <DataGridTextColumn Header="Цвет" Binding="{Binding Color.NameColor}" Width="*"/>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="*"/>
                 <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice, StringFormat=0.00}" Width="*"/>
-                <DataGridCheckBoxColumn Header="Арендована?" Binding="{Binding Rented}" Width="130"/>
+                <DataGridCheckBoxColumn Header="Арендован?" Binding="{Binding Rented}" Width="130"/>
 
                 <DataGridTemplateColumn Width="190" x:Name="Column">
                     <DataGridTemplateColumn.CellTemplate>
