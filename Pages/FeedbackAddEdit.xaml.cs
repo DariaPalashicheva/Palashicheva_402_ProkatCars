@@ -56,7 +56,7 @@ namespace Palashicheva_402_ProkatCars.Pages
             try
             {
                 ProkatEntities.GetContext().SaveChanges();
-                MessageBox.Show("Отзыв успешно добавлен!");
+                MessageBox.Show("Отзыв успешно добавлен!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

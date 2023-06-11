@@ -63,7 +63,7 @@ namespace Palashicheva_402_ProkatCars.Pages
         {
             var ForRemoving = DGrid.SelectedItems.Cast<Car>().ToList();
 
-            if (MessageBox.Show($"Вы точно хотите удалить следующие{ForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {

@@ -23,10 +23,10 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Модель" Grid.Row="0" Style="{StaticResource TB}"/>
-        <TextBox Text="{Binding Model}" MaxLength="50" Grid.Row="0" Grid.Column="1"/>
-        <TextBlock Text="Марка" Grid.Row="1" Style="{StaticResource TB}"/>
-        <ComboBox SelectedItem="{Binding Brand}" Grid.Row="1" Grid.Column="1" x:Name="ComboBrand" DisplayMemberPath="NameBrand"/>
+        <TextBlock Text="Марка" Grid.Row="0" Style="{StaticResource TB}"/>
+        <ComboBox SelectedItem="{Binding Brand}" Grid.Row="0" Grid.Column="1" x:Name="ComboBrand" DisplayMemberPath="NameBrand"/>
+        <TextBlock Text="Модель" Grid.Row="1" Style="{StaticResource TB}"/>
+        <TextBox Text="{Binding Model}" MaxLength="50" Grid.Row="1" Grid.Column="1"/>
         <TextBlock Text="Год выпуска" Grid.Row="2" Style="{StaticResource TB}"/>
         <TextBox x:Name="tbYear" Text="{Binding Year}" Grid.Row="2" Grid.Column="1" MaxLength="4"/>
         <TextBlock Text="Цвет" Grid.Row="3" Style="{StaticResource TB}"/>
