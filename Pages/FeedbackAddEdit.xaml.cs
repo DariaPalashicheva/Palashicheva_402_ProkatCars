@@ -46,7 +46,7 @@ namespace Palashicheva_402_ProkatCars.Pages
 
             if (errors.Length > 0)
             {
-                MessageBox.Show(errors.ToString());
+                MessageBox.Show(errors.ToString(), "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
