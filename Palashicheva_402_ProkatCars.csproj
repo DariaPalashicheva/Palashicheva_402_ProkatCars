@@ -280,6 +280,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\focus2005.jpg" />
+    <Resource Include="Resources\pajeropinin2002.jpg" />
+    <Resource Include="Resources\vitz2007.jpeg" />
+    <Resource Include="Resources\santafe2002.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

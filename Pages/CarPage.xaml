@@ -18,6 +18,13 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameBrand}" Width="250"/>
                 <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="270"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImagePath}" Width="150" Height="150"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year}" Width="*"/>
                 <DataGridTextColumn Header="Цвет" Binding="{Binding Color.NameColor}" Width="*"/>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="*"/>

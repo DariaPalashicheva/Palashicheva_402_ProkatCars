@@ -24,6 +24,7 @@
           <Property Name="Number" Type="nvarchar" MaxLength="6" Nullable="false" />
           <Property Name="DayPrice" Type="money" Nullable="false" />
           <Property Name="Rented" Type="bit" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
@@ -208,6 +209,7 @@
           <Property Name="Number" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DayPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Rented" Type="Boolean" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Brand" Relationship="Self.FK_Car_Brand" FromRole="Car" ToRole="Brand" />
           <NavigationProperty Name="Color" Relationship="Self.FK_Car_Color" FromRole="Car" ToRole="Color" />
           <NavigationProperty Name="Rent" Relationship="Self.FK_Rent_Car" FromRole="Car" ToRole="Rent" />
@@ -401,6 +403,7 @@
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="DayPrice" ColumnName="DayPrice" />
                 <ScalarProperty Name="Rented" ColumnName="Rented" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
