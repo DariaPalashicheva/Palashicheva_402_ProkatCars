@@ -30,6 +30,13 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
         public decimal PhoneNumber { get; set; }
         public decimal SeriesNumberLicense { get; set; }
         public System.DateTime DateDriverLicense { get; set; }
+        public string FIO
+        {
+            get
+            {
+                return this.Familiya + " " + this.Name + " " + this.Otchestvo;
+            }
+        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rent> Rent { get; set; }

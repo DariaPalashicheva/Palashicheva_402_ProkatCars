@@ -41,5 +41,12 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
                 return "/Resources/" + Photo;
             }
         }
+        public string ModelNumber
+        {
+            get
+            {
+                return this.Model + " - " + this.Number;
+            }
+        }
     }
 }

@@ -16,8 +16,8 @@
 
         <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.Familiya}" Width="*"/>
-                <DataGridTextColumn Header="Автомобиль" Binding="{Binding Car.Model}" Width="*"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.FIO}" Width="1.5*"/>
+                <DataGridTextColumn Header="Автомобиль" Binding="{Binding Car.ModelNumber}" Width="*"/>
                 <DataGridTextColumn Header="Дата начала" Binding="{Binding StartDate, StringFormat={}{0:dd-MM-yyyy}}" Width="100"/>
                 <DataGridTextColumn Header="Дата конца проката" Binding="{Binding EndDate, StringFormat={}{0:dd-MM-yyyy}}" Width="160"/>
                 <DataGridTextColumn Header="Дней" Binding="{Binding RentalDays}" Width="*"/>
