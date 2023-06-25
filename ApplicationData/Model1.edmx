@@ -35,10 +35,10 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Otchestvo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DateBirth" Type="date" Nullable="false" />
-          <Property Name="Passport" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Passport" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="PhoneNumber" Type="decimal" Precision="11" Scale="0" Nullable="false" />
-          <Property Name="SeriesNumberLicense" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SeriesNumberLicense" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="DateDriverLicense" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Color">
@@ -223,10 +223,10 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Otchestvo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DateBirth" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Passport" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Passport" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PhoneNumber" Type="Decimal" Precision="11" Scale="0" Nullable="false" />
-          <Property Name="SeriesNumberLicense" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SeriesNumberLicense" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DateDriverLicense" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Rent" Relationship="Self.FK_Rent_Client" FromRole="Client" ToRole="Rent" />
         </EntityType>

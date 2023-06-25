@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Palashicheva_402_ProkatCars.Pages"
+      xmlns:local="clr-namespace:Palashicheva_402_ProkatCars.Pages" xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1400"
       Title="CarAddEdit">
@@ -32,7 +32,7 @@
         <TextBlock Text="Цвет" Grid.Row="3" Style="{StaticResource TB}"/>
         <ComboBox SelectedItem="{Binding Color}" Grid.Row="3" Grid.Column="1" x:Name="ComboColor" DisplayMemberPath="NameColor"/>
         <TextBlock Text="Номер" Grid.Row="4" Style="{StaticResource TB}"/>
-        <TextBox x:Name="tbNumber" Text="{Binding Number}" Grid.Row="4" Grid.Column="1" MaxLength="6"/>
+        <wpfx:MaskedTextBox x:Name="tbNumber" Text="{Binding Number}" Mask="L000LL" Grid.Row="4" Grid.Column="1" Width="380" Height="50" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="18"/>
         <TextBlock Text="Цена сутки" Grid.Row="5" Style="{StaticResource TB}"/>
         <TextBox x:Name="tbPrice" Text="{Binding DayPrice, StringFormat=0.00}" Grid.Row="5" Grid.Column="1"/>
         <TextBlock Text="Арендован?" Grid.Row="6" Style="{StaticResource TB}"/>

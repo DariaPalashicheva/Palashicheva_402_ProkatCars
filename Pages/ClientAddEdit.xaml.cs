@@ -44,13 +44,13 @@ namespace Palashicheva_402_ProkatCars.Pages
                 errors.AppendLine("Введите отчество");
             if (_current.DateBirth.Year < 1930)
                 errors.AppendLine("Укажите дату рождения");
-            if (_current.Passport <= 0 || tbPassport.Text.Length < 10 || tbPassport.Text.Any(Char.IsLetter))
+            if (string.IsNullOrWhiteSpace(_current.Passport) || !tbPassport.IsMaskFull)
                 errors.AppendLine("Проверьте! Паспорт должен состоять из серии(4 цифры) и номера(6 цифр)");
             if (string.IsNullOrWhiteSpace(_current.Address))
                 errors.AppendLine("Введите адрес");
-            if (_current.PhoneNumber <= 0 || tbPhoneNumber.Text.Length < 11 || tbPhoneNumber.Text.Any(Char.IsLetter))
-                errors.AppendLine("Введите номер телефона в формате 89991234455 (11 цифр)");
-            if (_current.SeriesNumberLicense <= 0 || tbSeriesNumberLicense.Text.Length < 10 || tbSeriesNumberLicense.Text.Any(Char.IsLetter))
+            if (string.IsNullOrWhiteSpace(_current.PhoneNumber) || !tbPhoneNumber.IsMaskFull)
+                errors.AppendLine("Введите номер телефона");
+            if (string.IsNullOrWhiteSpace(_current.SeriesNumberLicense) || !tbSeriesNumberLicense.IsMaskFull)
                 errors.AppendLine("Введите серию(4 цифры) и номер(6 цифр) водительского удостоверения");
             if (_current.DateDriverLicense.Year < 2012)
                 errors.AppendLine("Укажите дату выдачи водительского удостоверения");

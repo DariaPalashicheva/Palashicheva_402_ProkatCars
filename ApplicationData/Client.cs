@@ -25,10 +25,10 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
         public string Name { get; set; }
         public string Otchestvo { get; set; }
         public System.DateTime DateBirth { get; set; }
-        public decimal Passport { get; set; }
+        public string Passport { get; set; }
         public string Address { get; set; }
-        public decimal PhoneNumber { get; set; }
-        public decimal SeriesNumberLicense { get; set; }
+        public string PhoneNumber { get; set; }
+        public string SeriesNumberLicense { get; set; }
         public System.DateTime DateDriverLicense { get; set; }
         public string FIO
         {
@@ -37,7 +37,7 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
                 return this.Familiya + " " + this.Name + " " + this.Otchestvo;
             }
         }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rent> Rent { get; set; }
     }

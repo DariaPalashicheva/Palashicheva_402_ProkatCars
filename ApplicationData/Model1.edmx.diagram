@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f7d79ebb8f4144ab9a1e9a340767ac49" Name="Diagram1">
+      <Diagram DiagramId="eacf88e03b9b4f0e8e1578792924a74b" Name="Diagram1">
         <EntityTypeShape EntityType="ProkatssModel.Brand" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ProkatssModel.Car" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ProkatssModel.Client" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />

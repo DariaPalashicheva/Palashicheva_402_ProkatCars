@@ -46,7 +46,7 @@ namespace Palashicheva_402_ProkatCars.Pages
                 errors.AppendLine("Пожалуйста введите корректный год выпуска (из 4 цифр)");
             if (_current.Color == null)
                 errors.AppendLine("Укажите цвет");
-            if (string.IsNullOrWhiteSpace(_current.Number) || _current.Number.Length < 6)
+            if (string.IsNullOrWhiteSpace(_current.Number) || !tbNumber.IsMaskFull)
                 errors.AppendLine("Введите номер автомобиля(Номер должен состоять из 1 буквы, 3 цифр и 2 букв)");
             if (_current.DayPrice <= 0 || tbPrice.Text.Any(Char.IsLetter))
                 errors.AppendLine("Цена сутки не может быть отрицательной или равна нулю. Буквы не допустимы.");

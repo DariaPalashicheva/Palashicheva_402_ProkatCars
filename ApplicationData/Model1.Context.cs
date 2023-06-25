@@ -15,6 +15,7 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
     
     public partial class ProkatEntities : DbContext
     {
+
         private static ProkatEntities _context;
 
         public static ProkatEntities GetContext()
