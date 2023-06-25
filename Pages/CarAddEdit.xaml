@@ -35,7 +35,7 @@
         <TextBox x:Name="tbNumber" Text="{Binding Number}" Grid.Row="4" Grid.Column="1" MaxLength="6"/>
         <TextBlock Text="Цена сутки" Grid.Row="5" Style="{StaticResource TB}"/>
         <TextBox x:Name="tbPrice" Text="{Binding DayPrice, StringFormat=0.00}" Grid.Row="5" Grid.Column="1"/>
-        <TextBlock Text="Арендована?" Grid.Row="6" Style="{StaticResource TB}"/>
+        <TextBlock Text="Арендован?" Grid.Row="6" Style="{StaticResource TB}"/>
         <CheckBox IsChecked="{Binding Rented}" Grid.Row="6" Grid.Column="1" />
 
         <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>

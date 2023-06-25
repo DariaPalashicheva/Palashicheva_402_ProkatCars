@@ -53,6 +53,7 @@ namespace Palashicheva_402_ProkatCars
             {
                 BtnCar.Visibility = Visibility.Visible;
                 BtnFeedbackAdd.Visibility = Visibility.Visible;
+                BtnFeedback.Visibility = Visibility.Visible;
             }
             if (AppFrame.DostupRole == 1)
             {

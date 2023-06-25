@@ -28,10 +28,25 @@ namespace Palashicheva_402_ProkatCars.ApplicationData
         public string Number { get; set; }
         public decimal DayPrice { get; set; }
         public bool Rented { get; set; }
+        public string Photo { get; set; }
     
         public virtual Brand Brand { get; set; }
         public virtual Color Color { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rent> Rent { get; set; }
+        public string ImagePath
+        {
+            get
+            {
+                return "/Resources/" + Photo;
+            }
+        }
+        public string ModelNumber
+        {
+            get
+            {
+                return this.Model + " - " + this.Number;
+            }
+        }
     }
 }

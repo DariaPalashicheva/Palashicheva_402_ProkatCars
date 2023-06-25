@@ -65,6 +65,8 @@ namespace Palashicheva_402_ProkatCars.Pages
 
         private void BtnGuest_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Успешный вход как гость",
+                                "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             AppFrame.DostupRole = 0;
             AppFrame.MainFrame.Navigate(new MainPage());
         }

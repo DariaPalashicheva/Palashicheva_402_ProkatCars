@@ -25,6 +25,24 @@ namespace Palashicheva_402_ProkatCars.Pages
         {
             InitializeComponent();
             DGrid.ItemsSource = ProkatEntities.GetContext().Feedback.ToList();
+            if (AppFrame.DostupRole == 0)
+            {
+                BtnAdd.Visibility = Visibility.Collapsed;
+                BtnDelete.Visibility = Visibility.Collapsed;
+                Column.Visibility = Visibility.Collapsed;
+            }
+            if (AppFrame.DostupRole == 1)
+            {
+                BtnAdd.Visibility = Visibility.Visible;
+                BtnDelete.Visibility = Visibility.Visible;
+                Column.Visibility = Visibility.Visible;
+            }
+            if (AppFrame.DostupRole == 2)
+            {
+                BtnAdd.Visibility = Visibility.Visible;
+                BtnDelete.Visibility = Visibility.Visible;
+                Column.Visibility = Visibility.Visible;
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -50,13 +68,13 @@ namespace Palashicheva_402_ProkatCars.Pages
         {
             var ForRemoving = DGrid.SelectedItems.Cast<Feedback>().ToList();
 
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить выбранные данные?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
                     ProkatEntities.GetContext().Feedback.RemoveRange(ForRemoving);
                     ProkatEntities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные удалены");
+                    MessageBox.Show("Данные удалены", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
 
                     DGrid.ItemsSource = ProkatEntities.GetContext().Feedback.ToList();
                 }
